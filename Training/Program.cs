@@ -29,6 +29,8 @@ namespace Training
             employe.Work();
             Courier courier = new Courier();
             courier.Work();
+            Employee courier2 = new Courier();
+            courier2.Work();
 
             List<Employee> employees = new List<Employee>();
             employees.Add(new Labeler());
@@ -40,6 +42,15 @@ namespace Training
             {
                 employees[i].Work();
             }
+
+            Console.WriteLine("-------------------");
+
+            MyBase instance1 = new MyBase("First");
+            Console.WriteLine(instance1.myPublicFild);
+            MyDerived instance2 = new MyDerived("first","second");
+            Console.WriteLine(instance2.myPublicFild);
+            //Console.WriteLine(instance2.myProtectedFild);
+
         }
     }
 }

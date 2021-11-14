@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Inheritance\MyBase.cs" />
+    <Compile Include="Inheritance\MyDerived.cs" />
     <Compile Include="polymorphism\Checker.cs" />
     <Compile Include="polymorphism\Courier.cs" />
     <Compile Include="polymorphism\Employee.cs" />
