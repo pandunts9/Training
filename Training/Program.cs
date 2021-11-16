@@ -8,52 +8,91 @@ namespace Training
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            /*****************************************
+            * Polumorphism
+            **************************************/
 
-            List<Shape> shapes = new List<Shape>()
+            if (true)
             {
-                new Rectangle(),
-                new Triangle(),
-                new Circle()
-            };
+                //    List<Shape> shapes = new List<Shape>()
+                //{
+                //    new Rectangle(),
+                //    new Triangle(),
+                //    new Circle()
+                //};
 
-            foreach (Shape shape in shapes)
-            {
-                shape.Draw();
+                //    foreach (Shape shape in shapes)
+                //    {
+                //        shape.Draw();
+                //    }
+
+                //    Console.WriteLine("-------------------");
+
+                //    Employee employe = new Employee();
+                //    employe.Work();
+                //    Courier courier = new Courier();
+                //    courier.Work();
+                //    Employee courier2 = new Courier();
+                //    courier2.Work();
+
+                //    List<Employee> employees = new List<Employee>();
+                //    employees.Add(new Labeler());
+                //    employees.Add(new WarehouseWorker());
+                //    employees.Add(new Checker());
+                //    employees.Add(new Courier());
+
+                //    for (int i = 0; i < employees.Count; i++)
+                //    {
+                //        employees[i].Work();
+                //    }
+
+                //    Console.WriteLine("-------------------");
+
+                //    MyBase instance1 = new MyBase("First");
+                //    Console.WriteLine(instance1.myPublicFild);
+                //    MyDerived instance2 = new MyDerived("first", "second");
+                //    Console.WriteLine(instance2.myPublicFild);
+                //    //Console.WriteLine(instance2.myProtectedFild);
             }
 
-            Console.WriteLine("-------------------");
+            /*****************************************
+             * Interface 
+             **************************************/
 
-            Employee employe = new Employee();
-            employe.Work();
-            Courier courier = new Courier();
-            courier.Work();
-            Employee courier2 = new Courier();
-            courier2.Work();
+            Email email = new Email();
+            Sms sms = new Sms();
+            Envelope envelope = new Envelope();
 
-            List<Employee> employees = new List<Employee>();
-            employees.Add(new Labeler());
-            employees.Add(new WarehouseWorker());
-            employees.Add(new Checker());
-            employees.Add(new Courier());
+            List<Notification> not = new List<Notification>();
+            not.Add(new Notification(email));
+            not.Add(new Notification(sms));
+            not.Add(new Notification(envelope));
+            /*****************************************
+            is this true?(without notification list and without using Notification class)
 
-            for (int i = 0; i < employees.Count; i++)
+            List<IMessage> notifications = new List<IMessage>();
+            notifications.Add(new Email());
+            notifications.Add(new Sms());
+            notifications.Add(new Envelope());
+            for (int i = 0; i < notifications.Count; i++)
             {
-                employees[i].Work();
+               notifications[i].SendMessage();
             }
-
-            Console.WriteLine("-------------------");
-
-            MyBase instance1 = new MyBase("First");
-            Console.WriteLine(instance1.myPublicFild);
-            MyDerived instance2 = new MyDerived("first","second");
-            Console.WriteLine(instance2.myPublicFild);
-            //Console.WriteLine(instance2.myProtectedFild);
-
+            **************************************/
+            for (int i = 0; i < not.Count; i++)
+            {
+               not[i].DoNotify();
+            }
         }
     }
+            
 }
+
+            
+
+/*
 public class Shape
 {
     // A few example members
@@ -95,4 +134,5 @@ public class Triangle : Shape
         base.Draw();
     }
 }
+*/
 

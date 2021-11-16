@@ -8,6 +8,7 @@ namespace Training
 {
     class Employee
     {
+        
         public virtual void Work()
         {
             Console.WriteLine("I do my work!");

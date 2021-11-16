@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Training
 {
-    class Courier:Employee
+    public class Sms : IMessage
     {
-      
-        public override void Work()
+        public void SendMessage()
         {
-            Console.WriteLine("I deliver the product!");
+            Console.WriteLine("Sms sended!");
         }
     }
 }
