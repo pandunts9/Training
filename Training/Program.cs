@@ -85,6 +85,34 @@ namespace Training
             {
                not[i].DoNotify();
             }
+
+
+            
+            Courier courier = new Courier("Armen", "Petrosyan");
+            Labeler labeler = new Labeler("Hamlet", "Gevorgyan");
+            Checker checker = new Checker("Hrayr", "Tovmasyan");
+            WarehouseWorker whWorker = new WarehouseWorker("Jirayr", "Margaryan");
+
+            List<Employee> employees = new List<Employee>();
+            employees.Add(new Employee(courier));
+            employees.Add(new Employee(checker));
+            employees.Add(new Employee(labeler));
+            employees.Add(new Employee(whWorker));
+
+            for (int i = 0; i < employees.Count; i++)
+            {
+                if (employees[i] is IInfo)
+                {
+                    IInfo employee = employees[i] as IInfo;
+                    employee.GetInfo();
+                }
+                if (employees[i] is ICarType)
+                {
+                    ICarType employee = employees[i] as ICarType;
+                    employee.GetCarType();
+                }
+                employees[i].GetFullName();
+            }
         }
     }
             

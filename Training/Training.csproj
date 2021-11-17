@@ -45,15 +45,15 @@
   <ItemGroup>
     <Compile Include="Inheritance\MyBase.cs" />
     <Compile Include="Inheritance\MyDerived.cs" />
-    <Compile Include="Interface\Email.cs" />
-    <Compile Include="Interface\Envelope.cs" />
-    <Compile Include="Interface\Notification.cs" />
-    <Compile Include="Interface\Sms.cs" />
-    <Compile Include="polymorphism\Checker.cs" />
-    <Compile Include="polymorphism\Courier.cs" />
-    <Compile Include="polymorphism\Employee.cs" />
-    <Compile Include="polymorphism\Labeler.cs" />
-    <Compile Include="polymorphism\WarehouseWorker.cs" />
+    <Compile Include="Interface\SendEmail\Email.cs" />
+    <Compile Include="Interface\SendEmail\Envelope.cs" />
+    <Compile Include="Interface\SendEmail\Notification.cs" />
+    <Compile Include="Interface\SendEmail\Sms.cs" />
+    <Compile Include="Interface\polymorphism\Checker.cs" />
+    <Compile Include="Interface\polymorphism\Courier.cs" />
+    <Compile Include="Interface\polymorphism\Employee.cs" />
+    <Compile Include="Interface\polymorphism\Labeler.cs" />
+    <Compile Include="Interface\polymorphism\WarehouseWorker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
