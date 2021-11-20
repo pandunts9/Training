@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Training
 {
-    public class _List:IEnumerable
+    public class _List : IEnumerable
     {
         private int _capacity = 0;
         private const int _defaultCapacity = 4;
@@ -20,9 +20,9 @@ namespace Training
 
         public int this[int i]
         {
-            get 
+            get
             {
-                if(i>= _size)
+                if (i >= _size)
                 {
                     throw new IndexOutOfRangeException();
                 }
@@ -30,9 +30,9 @@ namespace Training
                 {
                     return _items[i];
                 }
-                
+
             }
-            set 
+            set
             {
                 if (i >= _size)
                 {
@@ -48,7 +48,7 @@ namespace Training
         public _List(int capacity)
         {
             _capacity = capacity;
-            _items = new int[capacity]; 
+            _items = new int[capacity];
         }
         public _List()
         {
@@ -59,13 +59,33 @@ namespace Training
             EnsureCapacity();
             _items[_size++] = value;
         }
+        public void Clear()
+        {
+            if (_size > 0)
+            {
+                Array.Clear(_items, 0, _size);
+                _size = 0;
+            }
+        }
+        public bool Contains(int item)
+        {
+            for (int i = 0; i < _items.Length; i++)
+            {
+                if (item == _items[i])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public override string ToString()
         {
             return $"Count = {Count}";
         }
         private void EnsureCapacity()
         {
-            if(_capacity == 0)
+            if (_capacity == 0)
             {
                 _capacity = _defaultCapacity;
                 _items = new int[_capacity];
@@ -89,7 +109,7 @@ namespace Training
 
         public _ListEnumerator GetEnumerator()
         {
-            return new _ListEnumerator(_items,_size);
+            return new _ListEnumerator(_items, _size);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -102,19 +122,19 @@ namespace Training
             private int[] _items;
             private int _size;
             private int count = 0;
-            public _ListEnumerator(int[] items,int size)
+            public _ListEnumerator(int[] items, int size)
             {
                 _items = items;
                 _size = size;
             }
-            public object Current { get=>_items[count++]; }
-            public bool MoveNext() 
+            public object Current { get => _items[count++]; }
+            public bool MoveNext()
             {
-                
-                return count< _size; 
+
+                return count < _size;
             }
         }
-        
+
 
 
     }

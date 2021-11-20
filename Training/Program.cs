@@ -17,11 +17,14 @@ namespace Training
             _list.Add(17);
             _list.Add(177);
             _list[4] = 588;
-            //Console.WriteLine(_list[4]);
+            Console.WriteLine(_list[4]);
             foreach (var item in _list)
             {
                 Console.WriteLine(item) ;
             }
+            Console.WriteLine(_list.Contains(17));
+            _list.Clear();
+            Console.WriteLine($"The count of list elements is - {0}",_list.Count);
 
             _ListOfWeakDays _days = new _ListOfWeakDays();
             Console.WriteLine("Write the weak day name to see the appropriate number!");
