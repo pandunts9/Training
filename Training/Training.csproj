@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListImplem_and_Foreach\_ListOfWeakDays.cs" />
     <Compile Include="Inheritance\MyBase.cs" />
     <Compile Include="Inheritance\MyDerived.cs" />
     <Compile Include="Interface\SendEmail\Email.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Interface\polymorphism\WarehouseWorker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ListImplem_and_Foreach\_List.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
