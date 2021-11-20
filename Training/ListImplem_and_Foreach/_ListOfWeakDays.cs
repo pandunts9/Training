@@ -37,26 +37,6 @@ namespace Training
         {
             return new _Listenumerator(_items);
         }
-
-
-        /************************* The standart shuld be ************************************/
-        //public class _Listenumerator
-        //{
-        //    private int count = 0;
-        //    private string[] _items;
-
-        //    public _Listenumerator(string[] items)
-        //    {
-        //        _items = items;
-        //    }
-
-        //    public object Current { get => _items[count++]; }
-        //    public bool MoveNext()
-        //    {
-        //        return count < _items.Length;
-        //    }
-        //}
-        /************************* Another Type ************************************/
         public class _Listenumerator
         {
             private int count = 0;
@@ -67,7 +47,7 @@ namespace Training
                 _items = items;
             }
 
-            public object Current { get =>$"{1 + count}) {_items[count++]}"; }
+            public object Current { get =>$"{1 + count}) {_items[count++]}"; } //public object Current { get => _items[count++]; }
             public bool MoveNext()
             {
                 return count < _items.Length;
