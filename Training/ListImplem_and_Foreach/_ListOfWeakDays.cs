@@ -23,7 +23,7 @@ namespace Training
                         return i;
                     }
                 }
-                throw new IndexOutOfRangeException();
+                throw new ArgumentNullException(); // is it true?
             }
         }
 
